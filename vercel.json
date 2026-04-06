@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/worklog/ep-:ep(\\d+)", "destination": "/worklog.html" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ],
+  "headers": [
+    {
+      "source": "/worklogs/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    }
+  ]
+}
